@@ -1,0 +1,41 @@
+#schedule-time {
+    padding: 12vh 0;
+    background-color: #FFFFFF;
+
+}
+
+.title {
+    margin-bottom: 1rem;
+    color: #a36f50;
+    font-size: 28px;
+    line-height: 24px;
+  }
+
+.text {
+    color: #1F1820;
+    font-size: 24px;
+    line-height: 60px;
+}
+
+.more-infos {
+    width: 147px;
+    height: 64px;
+    color: #A36F50;
+    border: 1px solid #A36F50;
+    transition: 0.5s;
+    &:focus {
+    box-shadow: none;
+    }
+    &:hover {
+    color: #FFFFFF;
+    border: none;
+    background: #A36F50;
+    }
+}
+
+// .imagem {
+//     & > img {
+//         width: 600px;
+//         height: 560px;
+//     }
+// }

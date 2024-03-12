@@ -1,0 +1,12 @@
+<button class="btn botao" data-toggle="modal" [attr.data-target]="'#' + button.id">
+    <img src="{{button.icon}}">
+    <div class="box-name">
+        <p class="button-name m-0">{{button.title}}</p>
+    </div>
+
+    <div class="box-more">
+        <p class="more m-0">Ver mais</p>
+    </div>
+</button>
+
+<app-modal [modal]="button"></app-modal>

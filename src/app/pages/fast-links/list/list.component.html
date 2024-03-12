@@ -1,0 +1,23 @@
+<div [ngClass]="{active: active, last: lista.last}">
+    <div class="box">
+        <div class="d-flex align-items-center">
+            <h3 class="lista-title mb-0">{{lista.titulo}}</h3>
+            <button *ngIf="!active; else menos" (click)="show()" type="button" data-toggle="collapse"
+                [attr.data-target]="'#lista' + lista.id" aria-expanded="false" aria-controls="collapseExample">
+                <img src="../../../assets/icons/services/plus.png">
+    
+            </button>
+            <ng-template #menos>
+                <button (click)="show()" type="button" data-toggle="collapse" [attr.data-target]="'#lista' + lista.id"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <img src="../../../assets/icons/services/minus.png">
+                </button>
+            </ng-template>
+        </div>
+        <div class="lista-links collapse mt-3" id="lista{{lista.id}}">
+            <div *ngFor="let links of lista.links">
+                <a class="lista-links-name"  href="{{links.url}}" target="_blank">{{links.nome}}</a>
+            </div>
+        </div>
+    </div>
+</div>

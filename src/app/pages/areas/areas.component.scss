@@ -1,0 +1,40 @@
+#areas {
+  padding: 12vh 0px 0px 0px;
+
+  background-color: #fbf6ee;
+}
+
+.title {
+  margin-bottom: 4rem;
+
+  color: #a36f50;
+  font-size: 28px;
+  line-height: 24px;
+}
+.text {
+  color: #1f1820;
+  font-size: 24px;
+  line-height: 60px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .space {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .areas {
+    text-align: center;
+  }
+  .seta {
+    display: none;
+  }
+}
+.follow {
+  top: 200px; /* altura que vai parar antes do topo */
+  margin-bottom: 200px;
+  position: sticky;
+}

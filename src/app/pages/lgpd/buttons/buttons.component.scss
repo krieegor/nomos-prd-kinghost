@@ -1,0 +1,59 @@
+.botao {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+
+  width: 400px;
+  height: 96px;
+  margin-bottom: 48px;
+
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.5s;
+  & > img {
+    margin-left: 10px;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    background: #ffffff;
+    & .button-name {
+      color: #1f1820;
+    }
+  }
+}
+
+.box-name {
+  width: 100%;
+  margin-left: 3%;
+}
+.button-name {
+  width: 100%;
+
+  text-align: start;
+
+  font-size: 16px;
+  color: #ffffff;
+
+  transition: 0.5s;
+}
+
+.box-more {
+  width: max-content;
+  margin-right: 7%;
+}
+.more {
+  width: max-content;
+
+  font-size: 16px;
+  color: #a36f50;
+}
+
+@media (max-width: 420px) {
+  .botao {
+    width: 300px;
+  }
+}

@@ -1,0 +1,26 @@
+
+<div class="service-card" [ngClass]="{active: active}">
+    <div class="container align-items-center">
+        <div class="d-flex align-items-center">
+            <div class="icon-calc">
+                <img src="{{card.icon}}">
+            </div>
+            <h3 class="service-name mb-0" [innerHTML]="card.title"></h3>
+            <button *ngIf="!active; else menos" (click)="show()" type="button" data-toggle="collapse"
+                [attr.data-target]="'#id' + card.id" aria-expanded="false" aria-controls="collapseExample">
+                <img 
+                    src="../../../assets/icons/services/plus.png">
+
+            </button>
+            <ng-template #menos>
+                <button (click)="show()" type="button" data-toggle="collapse" [attr.data-target]="'#id' + card.id"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <img src="../../../assets/icons/services/minus.png">
+                </button>
+            </ng-template>
+        </div>
+        <div class="collapse mt-5" id="id{{card.id}}">
+            <p>{{card.text}}</p>
+        </div>
+    </div>
+</div>

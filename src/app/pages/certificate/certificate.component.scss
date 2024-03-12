@@ -1,0 +1,31 @@
+#certificate {
+    padding: 12vh 0;
+    background-color: #FFFFFF;
+}
+
+.title {
+    margin-bottom: 1rem;
+    
+    color: #A36F50;
+    font-size: 28px;
+    line-height: 24px;
+
+}
+.text {
+    color: #1F1820;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: justify;
+}
+
+@media (max-width: 1200px) {
+    .space {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .seta-cinza {
+        display: none;
+    }
+}

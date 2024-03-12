@@ -1,0 +1,19 @@
+<section id="areas">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-lg-7 col-xl-6">
+                <div class="follow">
+                    <h4 class="title">Áreas de atuação</h4>
+                    <p class="text">Atuamos com excelência <br>
+                        nas seguintes áreas:</p>
+                    <img class="seta"
+                        src="../../../assets/icons/seta-branca.svg">
+                </div>
+            </div>
+            <div class="col-1 space"></div>
+            <div class="areas col-md-5 col-lg-5 col-xl-5">
+                <app-card-areas *ngFor="let area of areas" [area]="area"></app-card-areas>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,110 @@
+.modal-xl {
+  width: 53%;
+  float: right;
+}
+.modal-content {
+  min-height: 100vh;
+}
+.modal-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 48px;
+}
+.modal-title {
+  font-size: 24px;
+  line-height: 24px;
+
+  color: #a36f50;
+
+  margin-bottom: 64px;
+}
+.modal-text {
+  font-size: 16px;
+  font-family: Gilroy-BoldLight, sans-serif;
+  line-height: 40px;
+  margin-bottom: 56px;
+}
+.modal-button {
+  padding: 24px 32px;
+
+  border: 1px solid #a36f50;
+  color: #a36f50;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.camp {
+  margin-bottom: 56px;
+}
+
+.infos {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: #333333;
+}
+
+.input-text {
+  width: 400px;
+
+  border: none;
+  border-bottom: 1px solid #3333331A;
+  outline: none;
+ 
+}
+.input-check {
+  margin-top: 9px;
+  margin-right: 16px;
+  margin-left: 16px;
+
+}
+
+.termos {
+  display: flex;
+
+  font-family: Gilroy-BoldLight, sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+}
+a {
+  color: #A36F50;
+  text-decoration: underline;
+}
+
+.send {
+  margin-top: 32px;
+
+  padding: 20px 28px;
+
+  background-color: #ffffff;
+  color: #a36f50;
+  border-color: #a36f50;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.animacao {
+  animation: transicao 0.7s;
+}
+
+@media (max-width: 769px) {
+  .modal-xl {
+    width: 100%;
+    float: none !important;
+  }
+}
+
+
+@keyframes transicao {
+  to {
+    left: 0px
+  } 
+  from {
+    left: 1000px
+  }
+}

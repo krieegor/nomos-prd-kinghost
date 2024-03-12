@@ -1,0 +1,13 @@
+<div class="box" [ngClass]="{teste: area.last}">
+    <div class="row">
+        <div class="icon-box col-3">
+            <img class="icone" href="#" src="{{area.icon}}">
+        </div>
+        <div class="col-9 pl-0">
+            <div class="area-name" data-toggle="modal" [attr.data-target]="'#' + area.id" [innerHTML]="area.title">
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal [modal]="area"></app-modal>

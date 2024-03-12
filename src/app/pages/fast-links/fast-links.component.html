@@ -1,0 +1,19 @@
+<section id="fast-links">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-lg-6 col-xl-5">
+                <div class="follow">
+                    <h4 class="title">Links rápidos</h4>
+                    <p class="text">Links para facilitar <br>
+                        sua pesquisa</p>
+                    <img class="seta-cinza" src="../../../assets/icons/seta-branca.svg">
+                </div>
+            </div>
+            <div class="col-2 space"></div>
+
+            <div class="col-md-5 col-lg-6 col-xl-5">
+                <app-list *ngFor="let lista of listas" [lista]="lista"></app-list>
+            </div>
+        </div>
+    </div>
+</section>

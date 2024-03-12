@@ -1,0 +1,62 @@
+#consultation {
+  padding: 12vh 0;
+
+  background-color: #f4f3f4;
+}
+
+.title {
+  margin-bottom: 4rem;
+
+  color: #a36f50;
+  font-size: 24px;
+  line-height: 24px;
+}
+.text {
+  color: #1f1820;
+  font-size: 28px;
+  line-height: 60px;
+}
+
+.box-crcmg::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #ede2dc;
+  display: block;
+  margin-top: 6.3rem;
+  margin-bottom: 6.4rem;
+}
+.crcmg {
+  width: 206.45px;
+  cursor: pointer;
+  filter: opacity(30%);
+  transition: 0.5s;
+  &:hover {
+    filter: opacity(100%);
+  }
+}
+.cfc {
+  width: 151.18px;
+  cursor: pointer;
+  filter: opacity(30%);
+  transition: 0.5s;
+  &:hover {
+    filter: opacity(100%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .space {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .logos {
+    text-align: center;
+  }
+  .seta {
+    display: none;
+  }
+}

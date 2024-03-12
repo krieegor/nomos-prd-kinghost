@@ -1,0 +1,45 @@
+#lgpd {
+  background: #1f1820;
+}
+.box-text {
+  padding: 12vh 0;
+  width: 50%;
+}
+.box-img {
+  width: 50%;
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  margin-bottom: 2rem;
+
+  color: #a36f50;
+  font-size: 28px;
+  line-height: 12px;
+}
+.text {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 60px;
+
+  margin-bottom: 40px;
+}
+
+
+@media (max-width: 945px) {
+    .box-text {
+        width: 100%;
+    }
+    .box-img {
+       display: none;
+      }
+
+      .botoes {
+          display: grid;
+          justify-content: center;
+      }
+}

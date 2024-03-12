@@ -1,0 +1,65 @@
+<div class="modal fade p-0 animacao" id="{{modal.id}}" tabindex="-1" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl m-0" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <img style="margin-top: 3rem; margin-bottom: 3rem;" src="./../../../assets/icons/close.png">
+            </button>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-md-12 col-lg-7 col-xl-6" *ngIf="modalInfos; else contact">
+                        <img class="modal-icon" src="{{modal.icon}}">
+                        <ng-container *ngIf="!modal.titleModal; else titleModal">
+                            <h4 class="modal-title">{{modal.title}}</h4>
+                        </ng-container>
+                        <ng-template #titleModal>
+                            <h4 class="modal-title">{{modal.titleModal}}</h4>
+                        </ng-template>
+
+
+                        <p class="modal-text" [innerHTML]="modal.text"></p>
+                        <button class="btn modal-button" data-toggle="modal" data-target="#form">Entrar em contato</button>
+                    </div>
+                    <ng-template #contact>
+                        <div class="col-md-12 col-lg-8 col-xl-7">
+                            <h4 class="modal-title">Como podemos te ajudar?</h4>
+                            <div class="camp">
+                                <p class="infos">
+                                    Seu e-mail
+                                </p>
+                                <input class="input-text" type="text" [ngModel]="info.email">
+                            </div>
+                            <div class="camp">
+                                <p class="infos">
+                                    Seu nome
+                                </p>
+                                <input class="input-text" type="text">
+                            </div>
+                            <div class="camp">
+                                <p class="infos">
+                                    Seu telefone
+                                </p>
+                                <input class="input-text" type="text">
+                            </div>
+                            <div class="camp">
+                                <p class="infos">
+                                    Assunto
+                                </p>
+                                <input class="input-text" type="text">
+                            </div>
+                            <div class="termos">
+                                <input class="input-check" type="checkbox">
+                                <p class="mb-0">Declaro que eu li e concordo <br>
+                                    com os <a href="#">termos de uso.</a></p>
+                            </div>
+                            
+                            <button class="btn send" (click)="send()">Enviar</button>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
