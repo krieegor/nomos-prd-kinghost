@@ -8,6 +8,7 @@ nav {
   justify-content: center;
   text-align: center;
 }
+
 .scrollPage {
   background: #ffffff;
   & li a {
@@ -15,7 +16,7 @@ nav {
   }
   & button {
     color: #a36f50;
-    
+
     border: 1px solid #a36f50;
     &:hover {
       color: #ffffff;
@@ -43,10 +44,9 @@ a {
   border-bottom: 4px solid #a36f50;
 }
 
-
 button {
   margin-left: 40px;
-
+  padding: 10px 20px;
   border: 1px solid #ffffff;
   color: #ffffff;
   font-size: 16px;
@@ -63,14 +63,42 @@ button {
 
 @media (max-width: 1226px) {
   .nav-item {
-    padding: 15px 10px;
+    padding: 8px 10px; /* Diminuir o padding dos itens de navegação no responsivo */
+    font-size: 12px; /* Diminuir o tamanho da fonte dos itens de navegação no responsivo */
   }
   .logo {
     margin-right: 0px;
   }
   button {
     margin-left: 0px;
-    font-size: 14px;
+    padding: 5px 10px; /* Diminuir o padding dos botões no responsivo */
+    font-size: 12px; /* Diminuir o tamanho da fonte dos botões no responsivo */
+  }
+
+  /* Adicionando estilos para centralizar o texto "Menu" no botão apenas no responsivo */
+  .navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Ajuste a margem conforme necessário */
+    padding: 0.25rem 0.5rem; /* Diminuir o padding do botão Menu */
+    margin-bottom: 10px; /* Adiciona margem inferior ao botão Menu */
+  }
+
+  .navbar-toggler span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Estilos para mover a logomarca acima dos botões no mobile */
+  .large-screen {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    order: -1; /* Move a logomarca para o topo */
+    margin-bottom: 15px; /* Espaçamento abaixo da logomarca */
   }
 }
 
@@ -80,13 +108,12 @@ button {
   & li a {
     color: #1f1820;
   }
-    & button {
-      color: #a36f50;
-      
-      border: 1px solid #a36f50;
-      &:hover {
-        color: #ffffff;
-      }
-    
+  & button {
+    color: #a36f50;
+
+    border: 1px solid #a36f50;
+    &:hover {
+      color: #ffffff;
+    }
   }
 }

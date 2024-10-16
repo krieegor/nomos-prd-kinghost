@@ -11,16 +11,21 @@ export class VideoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   @HostListener('click', ['$event'])
-  scrollToItem(event) {
+  scrollToItem(event: Event): void {
       event.preventDefault();
-      const el = event.target;
+      const el = event.target as HTMLElement;
       const id = el?.getAttribute('href');
-      const section = document?.querySelector(id)?.offsetTop;
-      window.scroll(0, section);
+      if (id) {
+        const section = document.querySelector(id)?.offsetTop;
+        if (section !== undefined) {
+          window.scroll(0, section);
+        }
+      }
   }
 
-  redirect() { 
+  redirect(): void {
     window.open('https://api.whatsapp.com/send?1=pt_BR&phone=5534992947920', '_blank');
   }
 }

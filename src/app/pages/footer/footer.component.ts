@@ -9,12 +9,10 @@ export class FooterComponent implements OnInit {
 
   modal: any = {
     id: 'form',
-    
-  }
+  };
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

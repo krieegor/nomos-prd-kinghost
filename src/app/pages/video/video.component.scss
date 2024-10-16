@@ -21,6 +21,9 @@ video {
 .content {
     display: flex;
     position: relative;
+    justify-content: center; // Centraliza o conteúdo horizontalmente
+    align-items: center; // Centraliza o conteúdo verticalmente
+    text-align: center; // Centraliza o texto
 }
 
 p {
@@ -29,33 +32,34 @@ p {
     font-size: 54px;
     line-height: 60px;
     text-align: center;
-    
 }
 
 .more-infos {
     width: 147px;
-    margin-left: 40%;
     height: 64px;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     transition: 0.5s;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:focus {
-    box-shadow: none;
+        box-shadow: none;
+        outline: 2px solid #A36F50;
     }
     &:hover {
-    border: none;
-    background: #A36F50;
+        border: none;
+        background: #A36F50;
     }
 }
 
 .whatsapp {
     width: 80px;
     height: 80px;
-
     position: fixed;
     bottom: 40px;
     right: 40px;
-
     z-index: 1030;
     > img {
         cursor: pointer;
@@ -65,6 +69,17 @@ p {
 @media (max-width: 1024px) {
     p {
         font-size: 36px;
-        line-height: 84px;
+        line-height: 48px;
+    }
+    .more-infos {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 24px; /* Reduz o tamanho da fonte para telas menores */
+        line-height: 32px; /* Ajusta o line-height para telas menores */
     }
 }
