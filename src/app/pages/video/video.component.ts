@@ -18,9 +18,9 @@ export class VideoComponent implements OnInit {
       const el = event.target as HTMLElement;
       const id = el?.getAttribute('href');
       if (id) {
-        const section = document.querySelector(id)?.offsetTop;
-        if (section !== undefined) {
-          window.scroll(0, section);
+        const section = document.querySelector(id) as HTMLElement;
+        if (section) {
+          window.scroll(0, section.offsetTop);
         }
       }
   }

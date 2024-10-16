@@ -148,4 +148,11 @@ export class HeaderComponent implements OnInit {
   contact() {
     alert('building...');
   }
+
+  setActiveNavItem(event: Event): void {
+    const el = event.target as HTMLElement;
+    const navItems = this.document.querySelectorAll('.nav-item');
+    navItems.forEach(item => item.classList.remove('active'));
+    el.parentElement?.classList.add('active');
+  }
 }
