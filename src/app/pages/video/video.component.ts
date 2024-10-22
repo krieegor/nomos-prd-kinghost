@@ -26,6 +26,6 @@ export class VideoComponent implements OnInit {
   }
 
   redirect(): void {
-    window.open('https://api.whatsapp.com/send?1=pt_BR&phone=5534992947920', '_blank');
+    window.open('https://api.whatsapp.com/send?1=pt_BR&phone=5534997230808', '_blank');
   }
 }
